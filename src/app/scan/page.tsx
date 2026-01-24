@@ -186,16 +186,16 @@ export default function ScanPage() {
       </div>
 
       {/* Trust Badges */}
-      <div className="flex items-center gap-6 rounded-lg bg-slate-100 px-4 py-3">
-        <div className="flex items-center gap-2 text-sm text-slate-600">
+      <div className="flex flex-wrap items-center gap-3 rounded-lg bg-slate-100 px-3 py-2 md:gap-6 md:px-4 md:py-3">
+        <div className="flex items-center gap-2 text-xs text-slate-600 md:text-sm">
           <ShieldCheck className="h-4 w-4 text-green-600" />
           <span>Secure Processing</span>
         </div>
-        <div className="flex items-center gap-2 text-sm text-slate-600">
+        <div className="flex items-center gap-2 text-xs text-slate-600 md:text-sm">
           <ShieldCheck className="h-4 w-4 text-green-600" />
-          <span>AI-Powered Detection</span>
+          <span>AI-Powered</span>
         </div>
-        <div className="flex items-center gap-2 text-sm text-slate-600">
+        <div className="flex items-center gap-2 text-xs text-slate-600 md:text-sm">
           <ShieldCheck className="h-4 w-4 text-green-600" />
           <span>GDPR Compliant</span>
         </div>
@@ -289,7 +289,7 @@ export default function ScanPage() {
             </Card>
 
             {/* Action Buttons */}
-            <div className="flex gap-3">
+            <div className="flex flex-col gap-3 sm:flex-row">
               <Button
                 onClick={handleNewScan}
                 variant="outline"
@@ -310,7 +310,7 @@ export default function ScanPage() {
                 ) : (
                   <>
                     <Download className="mr-2 h-4 w-4" />
-                    Download Official Report
+                    Download Report
                   </>
                 )}
               </Button>
@@ -368,7 +368,7 @@ export default function ScanPage() {
           <h3 className="text-sm font-medium text-slate-900">
             Supported Document Types
           </h3>
-          <ul className="mt-2 grid grid-cols-3 gap-2 text-sm text-slate-600">
+          <ul className="mt-2 grid grid-cols-2 gap-2 text-xs text-slate-600 sm:text-sm md:grid-cols-3">
             <li className="flex items-center gap-2">
               <span className="h-2 w-2 rounded-full bg-red-400" />
               Bank Statements

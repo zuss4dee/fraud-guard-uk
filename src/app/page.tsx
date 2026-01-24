@@ -13,7 +13,7 @@ export default function DashboardPage() {
       </div>
 
       {/* Stats Grid */}
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-4">
         <StatsCard
           title="Documents Scanned"
           value={0}
@@ -41,7 +41,7 @@ export default function DashboardPage() {
       </div>
 
       {/* Placeholder for future content */}
-      <div className="rounded-lg border border-dashed border-slate-300 bg-white p-12 text-center">
+      <div className="overflow-x-auto rounded-lg border border-dashed border-slate-300 bg-white p-6 text-center md:p-12">
         <p className="text-slate-500">
           Recent activity and additional dashboard widgets will appear here.
         </p>
