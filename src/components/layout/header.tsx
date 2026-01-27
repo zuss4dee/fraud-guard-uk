@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import { ChevronRight, Bell } from "lucide-react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { UserButton } from "@clerk/nextjs";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { MobileNav } from "./mobile-nav";
@@ -44,18 +44,7 @@ export function Header() {
         <Separator orientation="vertical" className="hidden h-8 md:block" />
 
         {/* User Profile */}
-        <div className="flex items-center gap-2 md:gap-3">
-          <div className="hidden text-right sm:block">
-            <p className="text-sm font-medium text-slate-900">John Smith</p>
-            <p className="text-xs text-slate-500">Property Manager</p>
-          </div>
-          <Avatar className="h-8 w-8 md:h-9 md:w-9">
-            <AvatarImage src="" alt="User avatar" />
-            <AvatarFallback className="bg-slate-200 text-slate-600">
-              JS
-            </AvatarFallback>
-          </Avatar>
-        </div>
+        <UserButton afterSignOutUrl="/" />
       </div>
     </header>
   );
